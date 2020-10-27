@@ -50,6 +50,8 @@ cd $HOME/.config/ && tar -xf $HOME/.config/nvim.tar.gz
 cd $HOME/recon/emailgen && bundle update --bundler
 cd $HOME/recon/emailgen && bundle install
 
+sudo chsh -s $(which zsh) $user 
+
 echo 'Installing Neovim Plugin manager'
 /bin/su -l $user -c 'curl --create-dirs -fLo ~/.local/share/nvim/site/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
